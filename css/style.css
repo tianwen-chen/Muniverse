@@ -1,48 +1,137 @@
-body
-{
+
+*{
     margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #41484b;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
 }
 
+body{
+    /* background-color: rgba(141, 66, 5, 0.744); */
+    color: aliceblue;
+}
 
-#homepage {
-    background-color: blueviolet;
-    background-image: url('../images/header-background.jpg');
-    /* width: 100%;
-    background-repeat: no-repeat; */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    /* background-color: burlywood; */
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
 
-    
-    /* background-attachment: scroll;
+.logo{
+    /* logo animation 19:13 */
+    font-size:  25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a{
+    font-size: 18px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 30px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+/*. active????*/
+.navbar a.active{
+    color: rgb(79, 79, 79); /* when hover, change color*/
+}
+
+.home{
+    height: 100vh;
+    background: url("../images/header-background.jpg") no-repeat;
     background-size: cover;
-    background-position: top center;
-    
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content{
+    max-width: 550px;
+}
+
+.home-content h1{
+    font-size:  50px;
+    font-weight: 650;
+    line-height: 1.2;
+}
+
+.home-content h3{
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(244, 215, 185);
+}
+
+.home-content p{
+    font-size: 18px;
+    margin: 20px 0 40px;
+}
+
+.home-content .home-buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    height: 30px;
+}
+
+.home-buttons a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 100%;
+    background: rgb(183, 183, 230);
+    border: 1.5px solid palevioletred;
+    border-radius: 8px;
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    z-index: 1;
     overflow: hidden;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    margin: auto; */
+    transition: 0.5s;
 }
 
-.header-text h1
-{
-    font-size: 60px;
-    color: #fff;
+.home-buttons a{
+    background: transparent;
+    color: palevioletred;
 }
 
-.header-text .vertical-line
-{
-    height: 2px;
-    background-color: #fff;
-    width: 150px;
-    margin: 0 auto;
-    margin-top: 15px;
-    margin-bottom: 30px;
+.home-buttons a:hover{
+    color:whitesmoke;
 }
 
-.header-text p
-{
-    font-size: 26px;
-    color: #fff;
+.home-buttons a::before{
+    background: palevioletred;
 }
 
+.home-buttons a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: palevioletred;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-buttons a:hover::before{
+    width: 100%;
+}
