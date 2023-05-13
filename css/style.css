@@ -160,7 +160,7 @@ header{
 
 .about{
     /* height: 100vh; */
-    background: url("../images/about-space.jpg") no-repeat;
+    background: url("../images/about-background.jpg") no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -224,4 +224,18 @@ header{
     font-size: 1.2rem;
     margin: 2rem 0 3 rem;
     font-family: 'Papyrus', fantasy;
+}
+
+.contact{
+    min-height: auto;
+    padding-bottom: 7rem;
+    background: url(../images/buffer.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.contact form{
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
 }
